@@ -2,10 +2,11 @@ document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
     if (userName.length === 0) {
         alert('Preencha o Campo com o nome do usuário do GitHub')
-        return 
+        return
+
     }
-    getUserProfile(userName);
     
+        getUserProfile(userName) 
 
   
 
@@ -21,7 +22,6 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
             alert('Preencha o Campo com o nome do usuário do GitHub')
             return 
         }
-    
         getUserProfile(userName)
     }
 })
@@ -53,7 +53,6 @@ function getUserProfile(userName) {
 
         document.querySelector('.profile-data').innerHTML = userInfo
 
-        getUserRepositories(userName) 
     })
 
 }
@@ -71,3 +70,4 @@ function getUserRepositories(userName){
     })
 
 }
+getUserProfile(userName)
