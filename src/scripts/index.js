@@ -67,7 +67,7 @@ function getUserProfile(userName) {
 
     function getUserRepositories(userName) {
         repos(userName).then(reposData => {
-            let repositoriesItens = " "
+            let repositoriesItens = ""
             reposData.forEach(repo => {
                 repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
             })
